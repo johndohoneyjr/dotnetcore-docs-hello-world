@@ -14,6 +14,9 @@ jobs:
     runs-on: windows-latest
 
     steps:
+      - name: Install azure-cli
+        uses: pietrobolcato/install-azure-cli-action@v1.0.1 
+        
       - name: Azure Login
         uses: Azure/login@v1.5.1
         with:
