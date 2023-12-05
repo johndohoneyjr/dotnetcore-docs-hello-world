@@ -13,17 +13,7 @@ jobs:
   build:
     runs-on: windows-latest
 
-    steps:
-      - name: Install azure-cli
-        uses: pietrobolcato/install-azure-cli-action@v1.0.1 
-        
-      - name: Azure Login
-        uses: Azure/login@v1.5.1
-        with:
-          client-id: ${{ secrets.CLIENT }}
-          tenant-id:  ${{ secrets.TENANT }}
-          subscription-id: ${{ secrets.SUB }}
-          
+    steps:          
       - uses: actions/checkout@v4
 
       - name: Set up .NET Core
